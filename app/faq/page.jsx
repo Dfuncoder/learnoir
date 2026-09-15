@@ -4,7 +4,7 @@ import { FAQS } from '../../lib/data';
 
 export const metadata = {
   title: 'FAQ',
-  description: 'Frequently asked questions about Learningale: curriculum alignment, pricing vs private tutoring, interest tracks, devices and availability.',
+  description: 'Frequently asked questions about Learnoir: curriculum alignment, pricing vs private tutoring, interest tracks, devices and availability.',
 };
 
 export default function FaqPage() {

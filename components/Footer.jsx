@@ -6,7 +6,7 @@ export default function Footer() {
       <div className="wrap">
         <div className="foot-grid">
           <div className="foot-brand">
-            <Link className="logo" href="/">Learnin<b>gale</b></Link>
+            <Link className="logo" href="/"><img src="/logo.svg" alt="" width="28" height="28" /><span>Lear<b>noir</b></span></Link>
             <p>
               The school curriculum, taught through the interests students already love —
               anime, cinema, football and more. Curriculum-aligned video lessons for
@@ -33,7 +33,7 @@ export default function Footer() {
           </div>
         </div>
         <div className="foot-base">
-          <span>© {new Date().getFullYear()} Learningale. All rights reserved.</span>
+          <span>© {new Date().getFullYear()} Learnoir. All rights reserved.</span>
           <span>Made for curious minds, everywhere.</span>
         </div>
       </div>

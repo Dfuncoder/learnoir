@@ -4,7 +4,7 @@ import Faq from '../../components/Faq';
 
 export const metadata = {
   title: 'Pricing',
-  description: 'Learningale pricing: full curriculum access from $5/month or $40/year (₦3,000/₦25,000 in Nigeria). A full year costs less than two months of private tutoring.',
+  description: 'Learnoir pricing: full curriculum access for ₦3,000/month or ₦25,000/year. A full year costs less than two months of private tutoring.',
 };
 
 export default function Pricing() {
@@ -15,7 +15,7 @@ export default function Pricing() {
         <div className="wrap">
           <p className="kicker rv">Pricing</p>
           <h1 className="rv rv-d1">Two plans. Nothing hidden.</h1>
-          <p className="rv rv-d2">Full access to every subject, every topic and every live interest track — on any plan, in your currency.</p>
+          <p className="rv rv-d2">Full access to every subject, every topic and every live interest track — on every plan.</p>
         </div>
       </div>
       <section className="sec pricing-sec" style={{ paddingTop: 30 }}>

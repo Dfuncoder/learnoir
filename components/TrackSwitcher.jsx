@@ -5,6 +5,7 @@ import { TRACKS } from '../lib/data';
 export default function TrackSwitcher() {
   const [key, setKey] = useState('anime');
   const [fading, setFading] = useState(false);
+  const [broken, setBroken] = useState({});
   const t = TRACKS[key];
 
   const pick = (k) => {
@@ -12,6 +13,9 @@ export default function TrackSwitcher() {
     setFading(true);
     setTimeout(() => { setKey(k); setFading(false); }, 300);
   };
+
+  // Falls back to the gradient poster if an image is missing.
+  const hasImg = Boolean(t.img) && !broken[key];
 
   return (
     <>
@@ -22,13 +26,26 @@ export default function TrackSwitcher() {
           </button>
         ))}
       </div>
-      <div className="stagefx">
-        <div className={`poster rv ${fading ? 'fade' : ''}`}>
+      <div className="stagefx rv">
+        <div className={`poster ${fading ? 'fade' : ''}`}>
           <div className="poster-bg" style={{ background: t.bg }} />
-          <div className="poster-grain" />
-          <div className="poster-tag">{t.tag}</div>
-          <div className="poster-ep">{t.ep}</div>
-          <div className="poster-title">{t.title}</div>
+          {hasImg && (
+            <img
+              className="poster-img"
+              src={t.img}
+              alt={`${t.tag} — ${t.title}`}
+              onError={() => setBroken((b) => ({ ...b, [key]: true }))}
+            />
+          )}
+          <div className={hasImg ? "poster-shade" : "poster-grain"} />
+          {!hasImg && <div className="poster-tag">{t.tag}</div>}
+          {!hasImg && <div className="poster-ep">{t.ep}</div>}
+          {!hasImg && <div className="poster-title">{t.title}</div>}
+          <div className="poster-playwrap" aria-hidden="true">
+            <span className="poster-play">
+              <svg viewBox="0 0 24 24" width="26" height="26"><path d="M9 6.2v11.6l9.4-5.8z" fill="currentColor" /></svg>
+            </span>
+          </div>
         </div>
         <div className="sw-copy rv rv-d1">
           <h3>Newton's First Law — Inertia</h3>

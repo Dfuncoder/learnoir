@@ -3,7 +3,7 @@ import ContactForm from '../../components/ContactForm';
 
 export const metadata = {
   title: 'Contact',
-  description: 'Contact the Learningale team — partnerships, schools, press and support.',
+  description: 'Contact the Learnoir team — partnerships, schools, press and support.',
 };
 
 export default function Contact() {
@@ -24,12 +24,12 @@ export default function Contact() {
             <div className="contact-card rv rv-d1" style={{ marginBottom: 20 }}>
               <h3>Email</h3>
               <p>For anything at all — we read every message.</p>
-              <a className="btn btn-line" href="mailto:hello@learningale.com">hello@learningale.com</a>
+              <a className="btn btn-line" href="mailto:hello@learnoir.com">hello@learnoir.com</a>
             </div>
             <div className="contact-card rv rv-d2">
               <h3>Schools &amp; partnerships</h3>
-              <p>Bringing Learningale to a whole school or organisation? Let's design it together.</p>
-              <a className="btn btn-line" href="mailto:partners@learningale.com">partners@learningale.com</a>
+              <p>Bringing Learnoir to a whole school or organisation? Let's design it together.</p>
+              <a className="btn btn-line" href="mailto:partners@learnoir.com">partners@learnoir.com</a>
             </div>
           </div>
         </div>

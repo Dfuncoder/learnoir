@@ -1,16 +1,32 @@
 'use client';
-import { useState } from 'react';
-import { PRICING } from '../lib/data';
+import { useEffect, useRef, useState } from 'react';
+import Link from 'next/link';
+import { CURRENCIES, detectCurrencyCode, priceStrings } from '../lib/currency';
 
 export default function PricingPanel() {
-  const [cur, setCur] = useState('USD');
-  const p = PRICING[cur];
+  const [cur, setCur] = useState('NGN');
+  const manual = useRef(false);
+
+  useEffect(() => {
+    let alive = true;
+    detectCurrencyCode().then((code) => {
+      if (alive && code && !manual.current) setCur(code);
+    });
+    return () => { alive = false; };
+  }, []);
+
+  const pick = (code) => {
+    manual.current = true;
+    setCur(code);
+  };
+
+  const p = priceStrings(cur);
   return (
     <>
       <div className="cur-toggle rv" role="tablist" aria-label="Currency">
-        {Object.keys(PRICING).map((c) => (
-          <button key={c} role="tab" aria-selected={cur === c} className={cur === c ? 'on' : ''} onClick={() => setCur(c)}>
-            {c === 'NGN' ? '₦ NGN' : '$ USD'}
+        {Object.entries(CURRENCIES).map(([code, c]) => (
+          <button key={code} role="tab" aria-selected={cur === code} className={cur === code ? 'on' : ''} onClick={() => pick(code)}>
+            {c.label}
           </button>
         ))}
       </div>
@@ -25,7 +41,7 @@ export default function PricingPanel() {
             <li>Weekly parent reports</li>
             <li>Cancel any time, progress saved</li>
           </ul>
-          <button className="btn btn-line">Choose monthly</button>
+          <Link className="btn btn-line" href="/waitlist">Join the waitlist</Link>
         </div>
         <div className="plan hot rv rv-d1">
           <span className="badge">SAVE {p.save} · {p.permo}</span>
@@ -38,12 +54,9 @@ export default function PricingPanel() {
             <li>Exam-season priority content</li>
             <li>Costs less than 2 months of private tutoring</li>
           </ul>
-          <button className="btn btn-gold">Choose yearly</button>
+          <Link className="btn btn-gold" href="/waitlist">Join the waitlist</Link>
         </div>
       </div>
-      <p className="plans-note">
-        Billed in your local currency where supported. Prices shown for our launch markets.
-      </p>
     </>
   );
 }

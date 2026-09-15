@@ -42,7 +42,7 @@ export default function Stats() {
       </article>
       <article className="stat rv rv-d2">
         <div className="n"><Count end={10} /><small>×+</small></div>
-        <div className="l">What a year of private tutoring costs versus a year of Learningale — for fewer subjects, at fixed hours</div>
+        <div className="l">What a year of private tutoring costs versus a year of Learnoir — for fewer subjects, at fixed hours</div>
         <div className="src">₦240,000/yr typical home-tutor spend in our launch market</div>
       </article>
     </div>

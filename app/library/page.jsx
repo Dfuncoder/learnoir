@@ -4,7 +4,7 @@ import { SHELVES } from '../../lib/data';
 
 export const metadata = {
   title: 'Lesson Library',
-  description: 'Browse Learningale\'s cinematic lesson library: Physics, Chemistry, Mathematics, Biology and more — every topic taught through anime, blockbuster and football interest tracks.',
+  description: 'Browse Learnoir\'s cinematic lesson library: Physics, Chemistry, Mathematics, Biology and more — every topic taught through anime, blockbuster and football interest tracks.',
 };
 
 export default function Library() {
@@ -15,7 +15,7 @@ export default function Library() {
         <div className="wrap">
           <p className="kicker rv">The library</p>
           <h1 className="rv rv-d1">Now showing on the syllabus.</h1>
-          <p className="rv rv-d2">Every episode maps to one syllabus point. Locked titles unlock as new tracks enter production.</p>
+          <p className="rv rv-d2">Every episode maps to one syllabus point. The full library is in production and coming soon — <a href="/waitlist" style={{ textDecoration: 'underline' }}>join the waitlist</a> to be first in.</p>
         </div>
       </div>
       <section className="sec" style={{ paddingTop: 20 }}>

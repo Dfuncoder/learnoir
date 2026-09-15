@@ -13,7 +13,7 @@ export default function Home() {
       <Reveal />
       <header className="hero" id="top">
         <div className="hero-bg" role="img"
-          aria-label="Wall of Learningale lesson posters: anime surface tension, gravity, Newton's laws as a racing film, electrolysis in a cinematic lab" />
+          aria-label="Wall of Learnoir lesson posters: anime surface tension, gravity, Newton's laws as a racing film, electrolysis in a cinematic lab" />
         <div className="hero-shade" />
         <div className="hero-in">
           <p className="eyebrow rv">The school curriculum, streaming</p>
@@ -46,7 +46,7 @@ export default function Home() {
           <Stats />
           <p className="problem-copy rv">
             Exam scoreboards are falling and the usual response is more of the same lesson,
-            delivered harder. Learningale starts from a different premise:{' '}
+            delivered harder. Learnoir starts from a different premise:{' '}
             <b>a child who watches four hours of anime a day has no attention problem.</b>{' '}
             The material was simply never made for them. So we make it for them.
           </p>
@@ -92,7 +92,7 @@ export default function Home() {
           <div className="sec-head rv">
             <p className="kicker">The library</p>
             <h2>Now showing on the syllabus.</h2>
-            <p>A preview of the catalogue. New tracks and subjects unlock as we scale production.</p>
+            <p>A preview of the catalogue, now in production. Every title unlocks for the first cohort — join the waitlist to be there.</p>
           </div>
           {SHELVES.map((s) => (
             <div key={s.heading}>
@@ -125,9 +125,9 @@ export default function Home() {
               </ul>
             </div>
             <div className="cmp good rv rv-d1">
-              <h3>Learningale</h3>
-              <div className="price">$40<small style={{ fontSize: '1rem', color: 'var(--muted)' }}>/yr</small></div>
-              <div className="per">every subject, every topic, all year (₦25,000 in Nigeria)</div>
+              <h3>Learnoir</h3>
+              <div className="price">₦25,000<small style={{ fontSize: '1rem', color: 'var(--muted)' }}>/yr</small></div>
+              <div className="per">every subject, every topic, all year — every interest track included</div>
               <ul>
                 <li>Full curriculum, Grades 7 – 12</li>
                 <li>Any hour, any phone, unlimited replay</li>
@@ -136,7 +136,7 @@ export default function Home() {
               </ul>
             </div>
           </div>
-          <p className="punch rv">A full year of Learningale costs <b>less than two months</b> of private tutoring.</p>
+          <p className="punch rv">A full year of Learnoir costs <b>less than two months</b> of private tutoring.</p>
         </div>
       </section>
 
@@ -154,7 +154,7 @@ export default function Home() {
         <div className="wrap">
           <h2 className="rv">The feed already has their attention.<br />Put the syllabus inside it.</h2>
           <p className="rv rv-d1">Join the first cohort of families turning screen time into the strongest study habit their child has ever had.</p>
-          <Link className="btn btn-gold btn-big rv rv-d2" href="/pricing">Start watching</Link>
+          <Link className="btn btn-gold btn-big rv rv-d2" href="/waitlist">Join the waitlist</Link>
         </div>
       </section>
     </>

@@ -2,7 +2,7 @@ import Reveal from '../../components/Reveal';
 
 export const metadata = {
   title: 'About',
-  description: 'Why Learningale exists: children have not lost the ability to focus — education stopped competing for their attention. We are here to give curiosity back its pull.',
+  description: 'Why Learnoir exists: children have not lost the ability to focus — education stopped competing for their attention. We are here to give curiosity back its pull.',
 };
 
 export default function About() {
@@ -11,7 +11,7 @@ export default function About() {
       <Reveal />
       <div className="page-head">
         <div className="wrap">
-          <p className="kicker rv">About Learningale</p>
+          <p className="kicker rv">About Learnoir</p>
           <h1 className="rv rv-d1">Curiosity built everything.<br />We're giving it back its pull.</h1>
         </div>
       </div>
@@ -31,7 +31,7 @@ export default function About() {
           </p>
           <h2 className="rv">What we build</h2>
           <p className="rv">
-            Learningale delivers the school curriculum as cinematic, bingeable episodes,
+            Learnoir delivers the school curriculum as cinematic, bingeable episodes,
             matched to each child's own interests. The anime fan learns inertia from a
             swordsman who will not be moved. The football fan learns it from a dead ball on
             the penalty spot. <b>Same syllabus point, same exam question — a story that

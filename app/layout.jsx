@@ -3,17 +3,17 @@ import Nav from '../components/Nav';
 import Footer from '../components/Footer';
 
 export const metadata = {
-  metadataBase: new URL('https://learningale.example'),
+  metadataBase: new URL('https://learnoir.example'),
   title: {
-    default: 'Learningale — The School Curriculum, Streaming',
-    template: '%s | Learningale',
+    default: 'Learnoir — The School Curriculum, Streaming',
+    template: '%s | Learnoir',
   },
   description:
-    'Learningale teaches the full school curriculum through cinematic video lessons matched to each child\'s interests — anime, movies, football and more. Curriculum-aligned, on any phone, from $5/month.',
+    'Learnoir teaches the full school curriculum through cinematic video lessons matched to each child\'s interests — anime, movies, football and more. Curriculum-aligned, on any phone, from ₦3,000 a month.',
   keywords: ['school curriculum video lessons', 'online learning', 'WAEC', 'alternative to private tutor', 'anime learning', 'education platform'],
   openGraph: {
     type: 'website',
-    title: "Learningale — School, but they can't stop watching.",
+    title: "Learnoir — School, but they can't stop watching.",
     description: 'The full school curriculum, taught through the stories your child already loves.',
     images: ['/hero.jpg'],
   },
@@ -23,12 +23,12 @@ export const metadata = {
 const orgLd = {
   '@context': 'https://schema.org',
   '@type': 'EducationalOrganization',
-  name: 'Learningale',
+  name: 'Learnoir',
   description:
     'Video learning platform teaching the school curriculum through the styles children already love: anime, cinema, football and more.',
   offers: [
-    { '@type': 'Offer', name: 'Monthly plan', price: '5', priceCurrency: 'USD' },
-    { '@type': 'Offer', name: 'Yearly plan', price: '40', priceCurrency: 'USD' },
+    { '@type': 'Offer', name: 'Monthly plan', price: '3000', priceCurrency: 'NGN' },
+    { '@type': 'Offer', name: 'Yearly plan', price: '25000', priceCurrency: 'NGN' },
   ],
 };
 
